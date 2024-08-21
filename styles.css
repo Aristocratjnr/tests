@@ -74,6 +74,14 @@ body {
     align-items: center;
 }
 
+.guaranteed-draws {
+    text-align: center;
+}
+
+.guaranteed-draws p {
+    margin-bottom: 10px;
+}
+
 .payment-options img {
     height: 20px;
     margin-left: 10px;
@@ -108,6 +116,28 @@ body {
     overflow: hidden;
     width: 30%;
     text-align: center;
+}
+
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-details p {
+    margin: 5px 0;
+}
+
+.enter-btn {
+    background: linear-gradient(145deg, #e50914, #bf0811);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.enter-btn:hover {
+    background: linear-gradient(145deg, #bf0811, #e50914);
 }
 
 .card img {
