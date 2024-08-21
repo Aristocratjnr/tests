@@ -79,13 +79,15 @@ body {
     margin-left: 10px;
 }
 
-
 /* Competitions Banner */
 .competitions-banner {
     background-color: #e50914;
-    padding: 30px 0;
+    padding: 40px 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;  /* Make the banner curvy */
+    max-width:  100%;      
+    margin: 40px auto;    /* Center the banner horizontally */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add shadow for a polished effect */
 }
 
 .competitions-banner h1 {
