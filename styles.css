@@ -27,6 +27,21 @@ body {
     gap: 30px;
 }
 
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-buttons .login-btn, .nav-buttons .basket-btn {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-buttons .login-btn:hover, .nav-buttons .basket-btn:hover {
+    background-color: #bf0811;
+}
+
 .nav-links a {
     color: white;
     text-decoration: none;
