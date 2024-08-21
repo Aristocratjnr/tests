@@ -1,86 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Click Competitions</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- Header -->
-    <header class="navbar">
-        <div class="logo">
-            <img src="logo.png" alt="Click Competitions">
-        </div>
-        <nav class="nav-links">
-            <a href="#">Current Competitions</a>
-            <a href="#">Draw Results</a>
-            <a href="#">Winners</a>
-            <a href="#">Download App</a>
-        </nav>
-        <div class="nav-buttons">
-            <button class="login-btn">Login</button>
-            <button class="basket-btn">Basket (10)</button>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Click Competitions Logo">
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Current Competitions</a></li>
+                    <li><a href="#">Draw Results</a></li>
+                    <li><a href="#">Winners</a></li>
+                    <li><a href="#">Download App</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="guarantee">
+                    <p>Guaranteed draws - No extensions</p>
+                    <div class="payment-options">
+                        <img src="visa.png" alt="Visa">
+                        <img src="mastercard.png" alt="Mastercard">
+                        <img src="applepay.png" alt="Apple Pay">
+                        <img src="googlepay.png" alt="Google Pay">
+                        <img src="paypal.png" alt="PayPal">
+                    </div>
+                </div>
+                <div class="auth-buttons">
+                    <button class="login-btn">Login</button>
+                    <button class="basket-btn">Basket <span class="basket-count">10</span></button>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- Guaranteed Draws Section -->
-    <section class="guaranteed-draws">
-        <p>Guaranteed draws - No extensions</p>
-        <div class="payment-options">
-            <img src="visa.png" alt="Visa">
-            <img src="mastercard.png" alt="Mastercard">
-            <img src="apple-pay.png" alt="Apple Pay">
-            <img src="google-pay.png" alt="Google Pay">
-            <img src="paypal.png" alt="PayPal">
+    <section class="hero">
+        <div class="container">
+            <h1 class="section-title">COMPETITIONS</h1>
         </div>
     </section>
 
-    <!-- Competitions Banner -->
-    <section class="competitions-banner">
-        <div class="banner">
-            <h1>COMPETITIONS</h1>
+    <section class="competitions">
+        <div class="container">
+            <div class="competition-card">
+                <img src="competition1.jpg" alt="Competition 1">
+                <div class="competition-details">
+                    <p class="draw-date">ENDS SAT 24TH AUG</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 5%;"></div>
+                    </div>
+                    <p class="entry-price">£0.99 PER ENTRY</p>
+                    <p class="competition-description">ODDS ACCELERATOR INSTANTS – INCREASE YOUR CHANCES!</p>
+                    <button class="enter-now-btn">ENTER NOW</button>
+                </div>
+            </div>
+            <div class="competition-card">
+                <img src="competition2.jpg" alt="Competition 2">
+                <div class="competition-details">
+                    <p class="draw-date">DRAW WED 28TH AUG</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 5%;"></div>
+                    </div>
+                    <p class="entry-price">£5.00 PER ENTRY</p>
+                    <p class="competition-description">SHIPWRECK PRIZE EVERY TIME + MYSTERY PRIZES – 6,000 WINS!</p>
+                    <button class="enter-now-btn">ENTER NOW</button>
+                </div>
+            </div>
+            <div class="competition-card">
+                <img src="competition3.jpg" alt="Competition 3">
+                <div class="competition-details">
+                    <p class="draw-date">DRAW SAT 24TH AUG</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 3%;"></div>
+                    </div>
+                    <p class="entry-price">£0.29 PER ENTRY</p>
+                    <p class="competition-description">Win £20,000 Tax Free Cash For 29p *IMPROVED ODDS*</p>
+                    <button class="enter-now-btn">ENTER NOW</button>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Competitions Cards -->
-    <section class="competitions-cards">
-        <div class="card">
-            <img src="competition1.png" alt="Competition 1">
-            <div class="card-details">
-                <p class="ends-date">ENDS SAT 24TH AUG</p>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 5%;"></div>
-                </div>
-                <p class="price">£0.99 PER ENTRY</p>
-                <p class="description">ODDS ACCELERATOR INSTANTS - INCREASE YOUR CHANCES!</p>
-                <button class="enter-btn">ENTER NOW</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="competition2.png" alt="Competition 2">
-            <div class="card-details">
-                <p class="ends-date">DRAW WED 28TH AUG</p>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 5%;"></div>
-                </div>
-                <p class="price">£5.00 PER ENTRY</p>
-                <p class="description">SHIPWRECK PRIZE EVERYTIME + MYSTERY PRIZES - 6,000 WINS!</p>
-                <button class="enter-btn">ENTER NOW</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="competition3.png" alt="Competition 3">
-            <div class="card-details">
-                <p class="ends-date">DRAW SAT 24TH AUG</p>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 3%;"></div>
-                </div>
-                <p class="price">£0.29 PER ENTRY</p>
-                <p class="description">Win £20,000 Tax Free Cash For 29p *IMPROVED ODDS*</p>
-                <button class="enter-btn">ENTER NOW</button>
-            </div>
-        </div>
-    </section>
 </body>
+
 </html>
