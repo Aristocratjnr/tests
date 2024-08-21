@@ -27,25 +27,14 @@ body {
     gap: 30px;
 }
 
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
-.nav-buttons .login-btn, .nav-buttons .basket-btn {
-    padding: 10px 15px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.nav-buttons .login-btn:hover, .nav-buttons .basket-btn:hover {
-    background-color: #bf0811;
-}
-
 .nav-links a {
     color: white;
     text-decoration: none;
     font-size: 14px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
 }
 
 .nav-buttons {
@@ -58,10 +47,17 @@ body {
     background-color: #e50914;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
     border-radius: 5px;
-    font-size: 14px;
     cursor: pointer;
+}
+
+.nav-buttons .login-btn:hover, 
+.nav-buttons .basket-btn:hover {
+    background-color: #bf0811;
 }
 
 /* Guaranteed Draws Section */
@@ -74,14 +70,6 @@ body {
     align-items: center;
 }
 
-.guaranteed-draws {
-    text-align: center;
-}
-
-.guaranteed-draws p {
-    margin-bottom: 10px;
-}
-
 .payment-options img {
     height: 20px;
     margin-left: 10px;
@@ -92,19 +80,12 @@ body {
     background-color: #e50914;
     padding: 30px 0;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .competitions-banner h1 {
     color: white;
     margin: 0;
-    font-size: 28px;
-}
-
-.competitions-banner {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.competitions-banner h1 {
     font-size: 32px;
     font-weight: 700;
 }
@@ -125,28 +106,12 @@ body {
     overflow: hidden;
     width: 30%;
     text-align: center;
-}
-
-.card {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.card-details p {
-    margin: 5px 0;
-}
-
-.enter-btn {
-    background: linear-gradient(145deg, #e50914, #bf0811);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.enter-btn:hover {
-    background: linear-gradient(145deg, #bf0811, #e50914);
 }
 
 .card img {
@@ -158,10 +123,14 @@ body {
     padding: 15px;
 }
 
-.ends-date,
-.price {
+.ends-date, .price {
     font-weight: bold;
     margin: 10px 0;
+}
+
+.description {
+    font-size: 0.9em;
+    color: #555;
 }
 
 .progress-bar {
@@ -177,11 +146,6 @@ body {
     background-color: #e50914;
 }
 
-.description {
-    font-size: 0.9em;
-    color: #555;
-}
-
 .enter-btn {
     background-color: #e50914;
     color: white;
@@ -190,8 +154,16 @@ body {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 15px;
+    background: linear-gradient(145deg, #e50914, #bf0811);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.2s ease;
 }
 
+.enter-btn:hover {
+    background: linear-gradient(145deg, #bf0811, #e50914);
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
