@@ -31,10 +31,13 @@ body {
     color: white;
     text-decoration: none;
     font-size: 14px;
+    transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+    color: #e50914; /* Change color on hover */
+    text-decoration: none;
+
 }
 
 .nav-buttons {
