@@ -68,12 +68,17 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 25px;  /* Make the banner curvy */
+    max-width: 80%;       
+    margin: 20px auto;    /* Center the banner horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a nice effect */
 }
 
 .payment-options img {
     height: 20px;
     margin-left: 10px;
 }
+
 
 /* Competitions Banner */
 .competitions-banner {
