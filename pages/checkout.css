@@ -1,10 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    line-height: 1.6;
 }
 
+/* Header */
 .header {
     background-color: #ff0000;
     color: white;
@@ -13,6 +15,7 @@ body {
     border-radius: 20px 20px 0 0;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
+    overflow: hidden;
 }
 
 .header::before,
@@ -36,30 +39,40 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Content */
 .content {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap; /* Make it responsive */
     padding: 20px;
+    gap: 20px; /* Added gap for better spacing */
 }
 
 .image-section img {
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
     border-radius: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-section img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 .ticket-section {
     background-color: white;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 400px;
+    width: 100%; /* Ensure it scales on smaller devices */
 }
 
 .ticket-section h2 {
     color: #ff0000;
     font-size: 24px;
+    margin-bottom: 20px; /* Better spacing */
 }
 
 .entry-type button {
@@ -69,11 +82,12 @@ body {
     margin: 5px;
     border-radius: 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .entry-type button:hover {
     background-color: #d4d4d4;
+    transform: translateY(-2px); /* Lift effect on hover */
 }
 
 .ticket-quantity {
@@ -91,6 +105,7 @@ body {
     text-align: center;
     border-radius: 10px;
     border: 1px solid #ddd;
+    padding: 5px;
 }
 
 .slider {
@@ -108,17 +123,20 @@ body {
     border-radius: 20px;
     cursor: pointer;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .add-to-basket:hover {
     background-color: #218838;
+    transform: translateY(-3px); /* Lift effect on hover */
 }
 
 .timer {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    gap: 10px;
 }
 
 .countdown {
@@ -127,6 +145,8 @@ body {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 100px; /* Ensure it doesn't shrink too much */
+    text-align: center;
 }
 
 .sold-info {
@@ -139,18 +159,22 @@ body {
     height: 10px;
     margin-top: 5px;
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent overflow issues */
 }
 
 .progress {
     background-color: #ff0000;
     height: 100%;
     border-radius: 10px;
+    transition: width 0.3s ease;
 }
 
 .share-buttons {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    gap: 10px;
 }
 
 .share-buttons button {
@@ -160,34 +184,43 @@ body {
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
 }
 
 .share-buttons button:hover {
     transform: translateY(-3px);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #d4d4d4;
 }
 
 .share-buttons button:active {
     transform: translateY(0);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    .share-buttons button {
-        background-color: #333;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        padding: 10px;
-        margin: 5px;
-        font-size: 16px;
-        cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .info-bar {
+        flex-direction: column;
+        text-align: center;
     }
-    
-    .share-buttons button:hover {
-        background-color: #555;
+
+    .content {
+        flex-direction: column;
     }
-    
-    .share-buttons i {
-        font-size: 20px;
+
+    .image-section img {
+        max-width: 100%;
     }
-    
+
+    .ticket-section {
+        max-width: 100%;
+    }
+
+    .timer {
+        flex-direction: column;
+    }
+
+    .share-buttons {
+        flex-direction: column;
+    }
 }
