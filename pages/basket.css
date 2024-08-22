@@ -10,6 +10,8 @@ body {
     padding: 20px;
     text-align: center;
     color: white;
+    border-radius: 0 0 50px 50px; /* Makes the banner curvy */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .basket-container {
@@ -76,4 +78,19 @@ th, td {
 
 .checkout-btn:hover {
     background-color: #16a085;
+}
+
+.close-btn {
+    background-color: #d0021b;
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%; /* Makes the button circular */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: orange; /* Changes to orange on hover */
 }
