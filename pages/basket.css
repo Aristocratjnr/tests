@@ -1,19 +1,23 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    line-height: 1.6;
 }
 
+/* Header */
 .header {
     background-color: #d0021b;
     padding: 20px;
     text-align: center;
     color: white;
-    border-radius: 15px 15px 0 0; /* Curvy banner */
+    border-radius: 15px 15px 0 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; /* Added spacing below header */
 }
 
+/* Basket Container */
 .basket-container {
     width: 90%;
     max-width: 1000px;
@@ -24,6 +28,7 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Table */
 table {
     width: 100%;
     border-collapse: separate;
@@ -35,10 +40,11 @@ table {
 th, td {
     padding: 15px;
     text-align: left;
+    border-bottom: 1px solid #e0e0e0; /* Slightly lighter border for a softer look */
 }
 
 th {
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     color: #333;
     font-weight: bold;
     border-bottom: 2px solid #d0021b;
@@ -46,10 +52,10 @@ th {
 
 td {
     background-color: #ffffff;
-    border-bottom: 1px solid #ccc;
     vertical-align: middle;
 }
 
+/* Product Info */
 .product-info {
     display: flex;
     align-items: center;
@@ -63,6 +69,7 @@ td {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Quantity Buttons */
 .quantity-btn {
     padding: 8px 12px;
     font-size: 16px;
@@ -71,12 +78,13 @@ td {
     border: none;
     margin: 0 5px;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .quantity-btn:hover {
     background-color: #d0021b;
     color: white;
+    transform: translateY(-2px); /* Lift effect on hover */
 }
 
 #quantity {
@@ -89,26 +97,29 @@ td {
     margin: 0 5px;
 }
 
+/* Basket Summary */
 .basket-summary {
     margin-top: 30px;
     text-align: right;
 }
 
 .checkout-btn {
-    background-color: #1abc9c;
+    background-color: #126958;
     color: white;
     padding: 12px 25px;
     font-size: 18px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .checkout-btn:hover {
     background-color: #16a085;
+    transform: translateY(-2px); /* Lift effect on hover */
 }
 
+/* Close Button */
 .close-btn {
     background-color: #d0021b;
     color: white;
@@ -120,15 +131,62 @@ td {
     justify-content: center;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .close-btn:hover {
     background-color: orange;
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 .close-btn:before {
     content: '×';
     font-size: 20px;
     font-weight: bold;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px;
+    }
+
+    .basket-container {
+        padding: 15px;
+        width: 95%;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    .product-info img {
+        width: 60px;
+    }
+
+    .checkout-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .quantity-btn, #quantity {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .close-btn {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .basket-summary {
+        text-align: center;
+    }
+
+    .checkout-btn {
+        width: 100%;
+        margin-top: 15px;
+    }
 }
