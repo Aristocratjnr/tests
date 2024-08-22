@@ -5,9 +5,9 @@ function updateBasket() {
     const subtotal = (quantity * pricePerTicket).toFixed(2);
 
     // Update the subtotal display
-    document.getElementById('subtotal').textContent = `£${subtotal}`;
+    document.getElementById('subtotal').textContent = `₵${subtotal}`;
     document.getElementById('total-tickets').textContent = quantity;
-    document.getElementById('total-spend').textContent = `£${subtotal}`;
+    document.getElementById('total-spend').textContent = `₵${subtotal}`;
 
     // Save to local storage
     localStorage.setItem('ticketQuantity', quantity);
