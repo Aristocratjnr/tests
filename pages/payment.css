@@ -1,0 +1,96 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Checkout Container */
+.checkout-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px; /* More pronounced curvy edges */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    transition: box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Container */
+.checkout-container:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+/* Heading */
+.checkout-container h1 {
+    margin: 0 0 20px;
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+label {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Input Fields */
+input[type="number"],
+input[type="email"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Curvy input fields */
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus,
+input[type="email"]:focus {
+    border-color: #e50914; /* Highlight border color on focus */
+}
+
+/* Button */
+button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px; /* Curvy button */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #bf0811;
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .checkout-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    input[type="number"],
+    input[type="email"] {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
