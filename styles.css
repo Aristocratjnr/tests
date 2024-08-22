@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    line-height: 1.6;
 }
 
 /* Navbar */
@@ -14,6 +15,7 @@ body {
     align-items: center;
     padding: 10px 20px;
     color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
 }
 
 .logo img {
@@ -21,7 +23,6 @@ body {
 }
 
 .nav-links {
-    flex: 1;
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -30,14 +31,12 @@ body {
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s ease; /* Smooth transition for color change */
+    font-size: 16px; /* Increase font size for better readability */
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #e50914; /* Change color on hover */
-    text-decoration: none;
-
+    color: #e50914;
 }
 
 .nav-buttons {
@@ -50,15 +49,16 @@ body {
     background-color: #e50914;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
-    gap: 5px;
-    border-radius: 5px;
+    gap: 8px;
+    border-radius: 8px; /* Rounded corners */
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.nav-buttons .login-btn:hover, 
+.nav-buttons .login-btn:hover,
 .nav-buttons .basket-btn:hover {
     background-color: #bf0811;
 }
@@ -67,14 +67,14 @@ body {
 .guaranteed-draws {
     background-color: #333;
     color: white;
-    padding: 10px 20px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 25px;  /* Make the banner curvy */
-    max-width: 80%;       
-    margin: 20px auto;    /* Center the banner horizontally */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a nice effect */
+    border-radius: 25px;
+    max-width: 90%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .payment-options img {
@@ -85,42 +85,44 @@ body {
 /* Competitions Banner */
 .competitions-banner {
     background-color: #e50914;
-    padding: 40px 0;
+    padding: 40px 20px;
     text-align: center;
-    border-radius: 25px;  /* Make the banner curvy */
-    max-width:  100%;      
-    margin: 40px auto;    /* Center the banner horizontally */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add shadow for a polished effect */
+    border-radius: 25px;
+    max-width: 90%;
+    margin: 20px auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .competitions-banner h1 {
     color: white;
-    margin: 0;
-    font-size: 39px;
+    font-size: 36px; /* Adjust font size for readability */
     font-weight: bolder;
+    margin: 0;
 }
 
 /* Competitions Cards */
 .competitions-cards {
     display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
     gap: 20px;
+    justify-content: center;
     padding: 0 20px;
+    margin: 0;
 }
 
 .card {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 20%;
+    flex: 1 1 calc(25% - 20px); /* Responsive width with gap adjustment */
+    max-width: calc(25% - 20px);
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px); /* Slight lift effect */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -130,7 +132,7 @@ body {
 }
 
 .card-details {
-    padding: 15px;
+    padding: 20px;
 }
 
 .ends-date, .price {
@@ -145,8 +147,8 @@ body {
 
 .progress-bar {
     background-color: #f0f0f0;
-    height: 10px;
-    border-radius: 5px;
+    height: 12px;
+    border-radius: 6px;
     overflow: hidden;
     margin: 10px 0;
 }
@@ -160,10 +162,10 @@ body {
     background-color: #e50914;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 24px;
+    border-radius: 8px;
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 20px;
     background: linear-gradient(145deg, #e50914, #bf0811);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background 0.2s ease;
@@ -173,19 +175,102 @@ body {
     background: linear-gradient(145deg, #bf0811, #e50914);
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    .nav-buttons .login-btn,
+    .nav-buttons .basket-btn {
+        padding: 10px 18px;
+    }
+
+    .competitions-banner {
+        padding: 30px 15px;
     }
 
     .competitions-cards {
+        gap: 15px;
+    }
+
+    .card {
+        flex: 1 1 calc(33% - 15px); /* Adjust card width for medium screens */
+        max-width: calc(33% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
         flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .guaranteed-draws {
+        padding: 15px;
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .competitions-banner {
+        padding: 20px 10px;
+    }
+
+    .competitions-cards {
         gap: 20px;
     }
 
     .card {
-        width: 100%;
+        flex: 1 1 100%; /* Full width for cards */
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .nav-buttons .login-btn,
+    .nav-buttons .basket-btn {
+        padding: 10px 16px;
+    }
+
+    .competitions-banner h1 {
+        font-size: 28px;
+    }
+
+    .card-details {
+        padding: 15px;
     }
 }
