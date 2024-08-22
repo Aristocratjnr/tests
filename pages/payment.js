@@ -1,6 +1,6 @@
 function payWithPaystack() {
     var handler = PaystackPop.setup({
-        key: 'YOUR_PAYSTACK_PUBLIC_KEY', // Replace with your Paystack public key
+        key: '', // Replace with your Paystack public key
         email: document.getElementById('email').value,
         amount: document.getElementById('amount').value * 100, // Amount in kobo
         currency: 'NGN',
