@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>BASKET</h1>
+    </div>
+    <div class="basket-container">
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><button class="remove-btn">x</button></td>
+                    <td>
+                        <div class="product-info">
+                            <img src="ferrari.jpg" alt="Ferrari">
+                            <div>
+                                <p>Win This Ferrari 488 GTB + £5,000 Tax Free Cash</p>
+                                <p><strong>Answer:</strong> Apple</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>£0.48</td>
+                    <td>
+                        <button class="quantity-btn" id="decrement">-</button>
+                        <input type="number" id="quantity" value="10" min="1">
+                        <button class="quantity-btn" id="increment">+</button>
+                    </td>
+                    <td id="subtotal">£4.80</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="basket-summary">
+            <p>Total Tickets: <span id="total-tickets">10</span></p>
+            <p>Total Spend: <span id="total-spend">£4.80</span></p>
+            <button class="checkout-btn">PROCEED TO CHECKOUT</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
