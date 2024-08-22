@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #ff0000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.info-bar {
+    background-color: #000000;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.ticket-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    max-width: 400px;
+}
+
+.ticket-section h2 {
+    color: #ff0000;
+    font-size: 24px;
+}
+
+.entry-type button {
+    background-color: #e6e6e6;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ticket-quantity {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.ticket-quantity label {
+    margin-right: 10px;
+}
+
+.ticket-quantity input[type="number"] {
+    width: 50px;
+    text-align: center;
+}
+
+.slider {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.add-to-basket {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.timer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.countdown {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sold-info {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    height: 10px;
+    margin-top: 5px;
+}
+
+.progress {
+    background-color: #ff0000;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.share-buttons button {
+    background-color: #e6e6e6;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
