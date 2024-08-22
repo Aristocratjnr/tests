@@ -1,29 +1,63 @@
-document.getElementById('ticketSlider').addEventListener('input', function() {
-    document.getElementById('quantity').value = this.value;
-});
+// Countdown Timer
+const countdownDate = new Date("Aug 22, 2024 17:00:00").getTime();
 
-document.getElementById('quantity').addEventListener('input', function() {
-    let value = this.value;
-    if(value < 1) value = 1;
-    if(value > 24) value = 24;
-    this.value = value;
-    document.getElementById('ticketSlider').value = value;
-});
+const x = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
 
-document.getElementById('addTicket').addEventListener('click', function() {
-    let quantity = parseInt(document.getElementById('quantity').value);
-    if(quantity < 24) {
-        quantity++;
-        document.getElementById('quantity').value = quantity;
-        document.getElementById('ticketSlider').value = quantity;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days + " DAYS";
+    document.getElementById("hours").innerHTML = hours + " HRS";
+    document.getElementById("minutes").innerHTML = minutes + " MINS";
+    document.getElementById("seconds").innerHTML = seconds + " SECS";
+
+    if (distance < 0) {
+        clearInterval(x);
+        document.querySelector(".timer").innerHTML = "EXPIRED";
+    }
+}, 1000);
+
+// Ticket Quantity Slider
+const slider = document.getElementById("ticketSlider");
+const output = document.getElementById("ticketCount");
+const quantityInput = document.getElementById("quantity");
+
+output.innerHTML = slider.value; // Display the default slider value
+
+slider.oninput = function() {
+    output.innerHTML = this.value;
+    quantityInput.value = this.value;
+};
+
+quantityInput.oninput = function() {
+    slider.value = this.value;
+    output.innerHTML = this.value;
+};
+
+// Ticket Quantity Increment/Decrement Buttons
+const incrementButton = document.getElementById("increment");
+const decrementButton = document.getElementById("decrement");
+
+incrementButton.addEventListener("click", function() {
+    let currentValue = parseInt(quantityInput.value);
+    if (currentValue < slider.max) {
+        currentValue += 1;
+        quantityInput.value = currentValue;
+        slider.value = currentValue;
+        output.innerHTML = currentValue;
     }
 });
 
-document.getElementById('subtractTicket').addEventListener('click', function() {
-    let quantity = parseInt(document.getElementById('quantity').value);
-    if(quantity > 1) {
-        quantity--;
-        document.getElementById('quantity').value = quantity;
-        document.getElementById('ticketSlider').value = quantity;
+decrementButton.addEventListener("click", function() {
+    let currentValue = parseInt(quantityInput.value);
+    if (currentValue > slider.min) {
+        currentValue -= 1;
+        quantityInput.value = currentValue;
+        slider.value = currentValue;
+        output.innerHTML = currentValue;
     }
 });
