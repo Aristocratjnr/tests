@@ -21,6 +21,20 @@ const x = setInterval(function() {
     }
 }, 1000);
 
+document.querySelectorAll('.accordion-header').forEach(item => {
+    item.addEventListener('click', () => {
+        const parent = item.parentElement;
+        parent.classList.toggle('active');
+
+        document.querySelectorAll('.accordion-item').forEach(otherItem => {
+            if (otherItem !== parent) {
+                otherItem.classList.remove('active');
+            }
+        });
+    });
+});
+
+
 // Ticket Quantity Slider
 const slider = document.getElementById("ticketSlider");
 const output = document.getElementById("ticketCount");
