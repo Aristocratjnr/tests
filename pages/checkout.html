@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prize Competition</title>
     <link rel="stylesheet" href="checkout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-      <link rel="icon" href="../images/favicon.png" type="image/png">
+    <link rel="icon" href="../images/favicon.png" type="image/png">
 </head>
+
 <body>
+    <!-- Header Section -->
     <div class="header">
         <h1>WIN A PRIZE EVERYTIME *DAILY EDITION THURSDAY*</h1>
         <div class="info-bar">
@@ -18,39 +21,55 @@
         </div>
     </div>
 
+    <!-- Main Content Section -->
     <div class="content">
+        <!-- Image Section -->
         <div class="image-section">
             <img src="../images/competition.jpg" alt="Prize Time Image">
         </div>
+
+        <!-- Ticket Section -->
         <div class="ticket-section">
             <h2>₵2.00 PER ENTRY</h2>
             <div class="entry-type">
                 <button>ONLINE ENTRY</button>
                 <button>FREE POSTAL ENTRY</button>
             </div>
+
+            <!-- Ticket Quantity Section -->
             <div class="ticket-quantity">
                 <label for="quantity">Quantity</label>
                 <button id="decrement">-</button>
                 <input type="number" id="quantity" value="5" min="1" max="24">
                 <button id="increment">+</button>
+
+                <!-- Slider for Ticket Quantity -->
                 <div class="slider">
                     <input type="range" id="ticketSlider" value="5" min="1" max="24">
                     <div id="ticketCount"></div>
                 </div>
             </div>
+
+            <!-- Add to Basket Button -->
             <a href="basket.html"><button class="add-to-basket">ADD TO BASKET</button></a>
+
+            <!-- Countdown Timer Section -->
             <div class="timer">
                 <div class="countdown" id="days">0 DAYS</div>
                 <div class="countdown" id="hours">0 HRS</div>
                 <div class="countdown" id="minutes">0 MINS</div>
                 <div class="countdown" id="seconds">0 SECS</div>
             </div>
+
+            <!-- Sold Information Section -->
             <div class="sold-info">
                 <p>Tickets Sold: 975 of 999</p>
                 <div class="progress-bar">
                     <div class="progress" style="width: 98%;"></div>
                 </div>
             </div>
+
+            <!-- Social Share Buttons -->
             <div class="share-buttons">
                 <button><i class="fas fa-times"></i></button>
                 <button><i class="fab fa-facebook"></i></button>
@@ -60,7 +79,35 @@
             </div>
         </div>
     </div>
-
+    <div class="prize-description">
+        <h2>Prize Description</h2>
+        <hr class="line">
+        <h1>Win This iPad 10th Generation</h1>
+        <p>ENTRIES ONLY 25p</p>
+        <p>ENTER UP TO 250 TIMES PER PERSON.</p>
+        <p>Delivered to your door!</p>
+        <p>Your Apple iPad is up for anything – shoot and edit 4K video, draw a digital masterpiece or just watch some Apple TV. The <strong>A14 Bionic chip</strong> can do it all without skipping a beat. The <strong>10.9” Liquid Retina Display</strong> is just beautiful, with high resolution, amazing colours and thin bezels. On the back, the <strong>12 MP camera</strong> takes 4K video and stunning photos. The front camera’s got an upgrade too. It’s also 12 MP and uses <strong>Centre Stage</strong> to keep you front and centre during video calls. And getting to all these features is super easy and secure with <strong>Touch ID</strong> fingerprint scanner in the power button.</p>
+        <p><strong>Colour choice available to the winner</strong></p>
+        <p><strong>Cash Alternative Available</strong></p>
+    </div>
+    
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-header">Rules</div>
+            <div class="accordion-content">
+                <!-- Content for Rules goes here -->
+            </div>
+        </div>
+        <hr class="line">
+        <div class="accordion-item">
+            <div class="accordion-header">FAQs</div>
+            <div class="accordion-content">
+                <!-- Content for FAQs goes here -->
+            </div>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
+
 </html>

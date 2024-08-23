@@ -146,6 +146,35 @@ td {
 }
 
 /* Responsiveness */
+@media (max-width: 1024px) {
+    .basket-container {
+        padding: 15px;
+    }
+
+    th, td {
+        padding: 12px;
+    }
+
+    .product-info img {
+        width: 70px;
+    }
+
+    .checkout-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .quantity-btn, #quantity {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .close-btn {
+        width: 30px;
+        height: 30px;
+    }
+}
+
 @media (max-width: 768px) {
     .header {
         padding: 15px;
@@ -165,18 +194,18 @@ td {
     }
 
     .checkout-btn {
-        font-size: 16px;
-        padding: 10px 20px;
+        font-size: 14px;
+        padding: 8px 16px;
     }
 
     .quantity-btn, #quantity {
         font-size: 14px;
-        padding: 6px 10px;
+        padding: 6px 8px;
     }
 
     .close-btn {
-        width: 30px;
-        height: 30px;
+        width: 28px;
+        height: 28px;
     }
 }
 
@@ -188,5 +217,45 @@ td {
     .checkout-btn {
         width: 100%;
         margin-top: 15px;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .product-info img {
+        width: 50px;
+    }
+
+    .quantity-btn, #quantity {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    .close-btn {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 320px) {
+    .checkout-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    .quantity-btn, #quantity {
+        padding: 4px 6px;
+        font-size: 12px;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .product-info img {
+        width: 40px;
     }
 }

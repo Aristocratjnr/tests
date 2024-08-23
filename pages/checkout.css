@@ -1,3 +1,4 @@
+/* General Body Styles */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
@@ -6,7 +7,7 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
+/* Header Section */
 .header {
     background-color: #ff0000;
     color: white;
@@ -18,6 +19,7 @@ body {
     overflow: hidden;
 }
 
+/* Header Decorative Elements */
 .header::before,
 .header::after {
     content: '';
@@ -29,6 +31,7 @@ body {
     border-radius: 50%;
 }
 
+/* Info Bar */
 .info-bar {
     background-color: #000000;
     color: white;
@@ -39,15 +42,16 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Content */
+/* Content Section */
 .content {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Make it responsive */
+    flex-wrap: wrap; /* Responsive layout */
     padding: 20px;
-    gap: 20px; /* Added gap for better spacing */
+    gap: 20px; /* Added gap for spacing */
 }
 
+/* Image Section */
 .image-section img {
     max-width: 100%;
     height: auto;
@@ -56,25 +60,28 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
+/* Image Hover Effect */
 .image-section img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
+/* Ticket Section */
 .ticket-section {
     background-color: white;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 400px;
-    width: 100%; /* Ensure it scales on smaller devices */
+    width: 100%; /* Responsive width */
 }
 
 .ticket-section h2 {
     color: #ff0000;
     font-size: 24px;
-    margin-bottom: 20px; /* Better spacing */
+    margin-bottom: 20px; /* Spacing */
 }
 
+/* Entry Type Buttons */
 .entry-type button {
     background-color: #e6e6e6;
     border: none;
@@ -85,11 +92,13 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Entry Type Button Hover Effect */
 .entry-type button:hover {
     background-color: #d4d4d4;
-    transform: translateY(-2px); /* Lift effect on hover */
+    transform: translateY(-2px); /* Lift effect */
 }
 
+/* Ticket Quantity Controls */
 .ticket-quantity {
     display: flex;
     align-items: center;
@@ -100,6 +109,7 @@ body {
     margin-right: 10px;
 }
 
+/* Quantity Input */
 .ticket-quantity input[type="number"] {
     width: 50px;
     text-align: center;
@@ -113,6 +123,7 @@ body {
     margin: 0 10px;
 }
 
+/* Add to Basket Button */
 .add-to-basket {
     background-color: #28a745;
     color: white;
@@ -126,16 +137,18 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Add to Basket Hover Effect */
 .add-to-basket:hover {
     background-color: #218838;
-    transform: translateY(-3px); /* Lift effect on hover */
+    transform: translateY(-3px); /* Lift effect */
 }
 
+/* Countdown Timer */
 .timer {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
-    flex-wrap: wrap; /* Ensure responsiveness */
+    flex-wrap: wrap; /* Responsive layout */
     gap: 10px;
 }
 
@@ -145,14 +158,16 @@ body {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    min-width: 100px; /* Ensure it doesn't shrink too much */
+    min-width: 100px; /* Minimum width */
     text-align: center;
 }
 
+/* Sold Info Section */
 .sold-info {
     margin-top: 20px;
 }
 
+/* Progress Bar */
 .progress-bar {
     background-color: #e6e6e6;
     border-radius: 10px;
@@ -162,6 +177,7 @@ body {
     overflow: hidden; /* Prevent overflow issues */
 }
 
+/* Progress Bar Filling */
 .progress {
     background-color: #ff0000;
     height: 100%;
@@ -169,11 +185,12 @@ body {
     transition: width 0.3s ease;
 }
 
+/* Share Buttons */
 .share-buttons {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
-    flex-wrap: wrap; /* Ensure responsiveness */
+    flex-wrap: wrap; /* Responsive layout */
     gap: 10px;
 }
 
@@ -187,17 +204,20 @@ body {
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
 }
 
+/* Share Button Hover Effect */
 .share-buttons button:hover {
     transform: translateY(-3px);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
     background-color: #d4d4d4;
 }
 
+/* Share Button Active Effect */
 .share-buttons button:active {
     transform: translateY(0);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     .info-bar {
         flex-direction: column;
@@ -223,4 +243,132 @@ body {
     .share-buttons {
         flex-direction: column;
     }
+
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .header {
+        margin-bottom: 40px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+        color: #000;
+        border-bottom: 2px solid #d0021b;
+        padding-bottom: 10px;
+    }
+    
+    .header p {
+        font-size: 1.1rem;
+        color: #333;
+        margin: 5px 0;
+    }
+
+    .prize-description {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    
+    .prize-description h2 {
+        color: #ff0000;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .prize-description h1 {
+        font-size: 30px;
+        font-weight: bold;
+        margin: 20px 0;
+        color: #000;
+    }
+    
+    .prize-description p {
+        font-size: 18px;
+        margin: 10px 0;
+        color: #333;
+    }
+    
+    .prize-description hr.line {
+        border: none;
+        border-top: 2px solid #ff0000;
+        margin: 10px 0;
+    }
+    
+    .accordion {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0 20px;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .accordion-item {
+        padding: 20px 0;
+        border-bottom: 1px solid #d0021b;
+        cursor: pointer;
+        position: relative;
+    }
+    
+    .accordion-item:last-child {
+        border-bottom: none;
+    }
+    
+    .accordion-header {
+        font-size: 20px;
+        color: #333;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .accordion-header:after {
+        content: '+';
+        font-size: 24px;
+        color: #d0021b;
+    }
+    
+    .accordion-content {
+        display: none;
+        padding-top: 10px;
+        text-align: left;
+        color: #555;
+    }
+    
+    .accordion-item.active .accordion-content {
+        display: block;
+    }
+    
+    .accordion-item.active .accordion-header:after {
+        content: '-';
+    }
+    
+    .accordion-item hr.line {
+        border: none;
+        border-top: 2px solid #ff0000;
+        margin: 10px 0;
+    }
+    
+    @media (max-width: 768px) {
+        .prize-description h1 {
+            font-size: 24px;
+        }
+    
+        .prize-description p {
+            font-size: 16px;
+        }
+    
+        .accordion-header {
+            font-size: 18px;
+        }
+    }
+    
 }
