@@ -84,6 +84,10 @@ button:hover {
         padding: 20px;
     }
 
+    .checkout-container h1 {
+        font-size: 24px;
+    }
+
     input[type="number"],
     input[type="email"] {
         font-size: 14px;
@@ -92,5 +96,26 @@ button:hover {
     button {
         padding: 12px;
         font-size: 14px;
+    }
+}
+
+/* Further Mobile Adjustments */
+@media (max-width: 480px) {
+    .checkout-container {
+        padding: 15px;
+    }
+
+    .checkout-container h1 {
+        font-size: 20px;
+    }
+
+    input[type="number"],
+    input[type="email"] {
+        font-size: 12px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 12px;
     }
 }
