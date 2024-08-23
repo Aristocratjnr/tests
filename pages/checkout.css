@@ -17,18 +17,20 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+    margin-bottom: 20px; /* Space between header and content */
 }
 
-/* Header Decorative Elements */
+/* Improved Header Decorative Elements */
 .header::before,
 .header::after {
     content: '';
     position: absolute;
     bottom: -20px;
-    width: 100%;
-    height: 20px;
+    width: 120%;
+    height: 40px;
     background-color: #ff0000;
     border-radius: 50%;
+    left: -10%;
 }
 
 /* Info Bar */
@@ -40,15 +42,16 @@ body {
     padding: 10px;
     border-radius: 0 0 20px 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
 }
 
 /* Content Section */
 .content {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Responsive layout */
+    flex-wrap: wrap;
     padding: 20px;
-    gap: 20px; /* Added gap for spacing */
+    gap: 20px;
 }
 
 /* Image Section */
@@ -60,9 +63,8 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Image Hover Effect */
 .image-section img:hover {
-    transform: scale(1.05); /* Slight zoom effect */
+    transform: scale(1.05);
 }
 
 /* Ticket Section */
@@ -72,13 +74,14 @@ body {
     border-radius: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 400px;
-    width: 100%; /* Responsive width */
+    width: 100%;
 }
 
+/* Responsive Headings */
 .ticket-section h2 {
     color: #ff0000;
     font-size: 24px;
-    margin-bottom: 20px; /* Spacing */
+    margin-bottom: 20px;
 }
 
 /* Entry Type Buttons */
@@ -92,10 +95,9 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Entry Type Button Hover Effect */
 .entry-type button:hover {
     background-color: #d4d4d4;
-    transform: translateY(-2px); /* Lift effect */
+    transform: translateY(-2px);
 }
 
 /* Ticket Quantity Controls */
@@ -109,7 +111,6 @@ body {
     margin-right: 10px;
 }
 
-/* Quantity Input */
 .ticket-quantity input[type="number"] {
     width: 50px;
     text-align: center;
@@ -137,10 +138,9 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Add to Basket Hover Effect */
 .add-to-basket:hover {
     background-color: #218838;
-    transform: translateY(-3px); /* Lift effect */
+    transform: translateY(-3px);
 }
 
 /* Countdown Timer */
@@ -148,7 +148,7 @@ body {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
-    flex-wrap: wrap; /* Responsive layout */
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -158,7 +158,7 @@ body {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    min-width: 100px; /* Minimum width */
+    min-width: 100px;
     text-align: center;
 }
 
@@ -174,10 +174,9 @@ body {
     height: 10px;
     margin-top: 5px;
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Prevent overflow issues */
+    overflow: hidden;
 }
 
-/* Progress Bar Filling */
 .progress {
     background-color: #ff0000;
     height: 100%;
@@ -190,7 +189,7 @@ body {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
-    flex-wrap: wrap; /* Responsive layout */
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -204,14 +203,12 @@ body {
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
 }
 
-/* Share Button Hover Effect */
 .share-buttons button:hover {
     transform: translateY(-3px);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
     background-color: #d4d4d4;
 }
 
-/* Share Button Active Effect */
 .share-buttons button:active {
     transform: translateY(0);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -328,47 +325,82 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-    
-    .accordion-header:after {
-        content: '+';
-        font-size: 24px;
-        color: #d0021b;
+        padding-right: 20px;
     }
     
     .accordion-content {
+        font-size: 18px;
+        color: #666;
         display: none;
-        padding-top: 10px;
+        padding: 20px;
         text-align: left;
-        color: #555;
     }
     
     .accordion-item.active .accordion-content {
         display: block;
     }
     
-    .accordion-item.active .accordion-header:after {
+    .accordion-item.active .accordion-header::after {
         content: '-';
     }
     
-    .accordion-item hr.line {
+    .accordion-item::after {
+        content: '+';
+        position: absolute;
+        right: 20px;
+        font-size: 20px;
+        color: #333;
+    }
+
+    .banner-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .banner {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .banner img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .banner:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .banner:hover img {
+        transform: scale(1.1);
+    }
+
+    .banner .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: white;
+        color: red;
         border: none;
-        border-top: 2px solid #ff0000;
-        margin: 10px 0;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform 0.2s ease, background-color 0.3s ease;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     }
-    
-    @media (max-width: 768px) {
-        .prize-description h1 {
-            font-size: 24px;
-        }
-    
-        .prize-description p {
-            font-size: 16px;
-        }
-    
-        .accordion-header {
-            font-size: 18px;
-        }
+
+    .banner .close-button:hover {
+        background-color: #ff0000;
+        color: white;
+        transform: scale(1.1);
     }
-    
 }
