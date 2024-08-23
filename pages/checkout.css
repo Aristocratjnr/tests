@@ -40,6 +40,96 @@ body {
 .header-wrapper {
     padding: 20px 10px;
 }
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+}
+
+.entry-price {
+    color: #ff0000;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.entry-price span {
+    font-size: 0.8em;
+    color: #999;
+    font-weight: normal;
+}
+
+.question {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.answers {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.answer {
+    flex: 1;
+    padding: 15px 20px;
+    margin: 0 10px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.answer.selected {
+    background-color: #ff0000;
+    color: white;
+    border-color: #ff0000;
+}
+
+.answer:hover {
+    border-color: #ff0000;
+}
+
+.entry-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.entry-button {
+    flex: 1;
+    padding: 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.entry-button.online {
+    background-color: #28a745;
+    color: white;
+}
+
+.entry-button.online:hover {
+    background-color: #218838;
+}
+
+.entry-button.postal {
+    background-color: transparent;
+    color: #28a745;
+    border: 2px solid #28a745;
+}
+
+.entry-button.postal:hover {
+    background-color: #28a745;
+    color: white;
+}
 
 /* Info Bar */
 .info-bar {
