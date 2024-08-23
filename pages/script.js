@@ -1,5 +1,5 @@
 // Countdown Timer
-const countdownDate = new Date("Aug 23, 2024 16:00:00").getTime();
+const countdownDate = new Date("2024-08-23T16:00:00").getTime();
 
 const x = setInterval(function() {
     const now = new Date().getTime();
@@ -20,7 +20,6 @@ const x = setInterval(function() {
         document.querySelector(".timer").innerHTML = "EXPIRED";
     }
 }, 1000);
-
 document.querySelectorAll('.accordion-header').forEach(item => {
     item.addEventListener('click', () => {
         const parent = item.parentElement;
