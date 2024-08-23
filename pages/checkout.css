@@ -13,11 +13,13 @@ body {
     color: white;
     text-align: center;
     padding: 20px 0;
-    border-radius: 20px 20px 0 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
     position: relative;
     overflow: hidden;
-    margin-bottom: 20px; /* Space between header and content */
+    margin: 0 auto 30px auto; /* Center the header and add space below */
+    max-width: 90%; /* Ensure it looks good on different screen sizes */
+    width: 100%;
 }
 
 /* Improved Header Decorative Elements */
@@ -25,12 +27,18 @@ body {
 .header::after {
     content: '';
     position: absolute;
-    bottom: -20px;
-    width: 120%;
-    height: 40px;
-    background-color: #ff0000;
+    bottom: -25px; /* Move decorative elements slightly lower */
+    width: 140%;
+    height: 50px;
+    background-color: rgba(255, 0, 0, 0.8); /* Slight transparency for a layered effect */
     border-radius: 50%;
-    left: -10%;
+    left: -20%;
+    transform: rotate(-3deg); /* Slightly rotate for a dynamic look */
+}
+
+/* Optional: Add Some Spacing Above the Header */
+.header-wrapper {
+    padding: 20px 10px;
 }
 
 /* Info Bar */
