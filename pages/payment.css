@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    line-height: 1.5; /* Improved readability */
 }
 
 /* Checkout Container */
@@ -13,14 +14,13 @@ body {
     margin: 40px auto;
     padding: 30px;
     background: #fff;
-    border-radius: 12px; /* More pronounced curvy edges */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease;
 }
 
-/* Hover Effect for Container */
 .checkout-container:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 /* Heading */
@@ -50,14 +50,14 @@ input[type="email"] {
     padding: 12px;
     font-size: 16px;
     border: 1px solid #ddd;
-    border-radius: 8px; /* Curvy input fields */
+    border-radius: 8px;
     margin-bottom: 20px;
     transition: border-color 0.3s ease;
 }
 
 input[type="number"]:focus,
 input[type="email"]:focus {
-    border-color: #e50914; /* Highlight border color on focus */
+    border-color: #e50914;
 }
 
 /* Button */
@@ -66,7 +66,7 @@ button {
     color: white;
     border: none;
     padding: 15px;
-    border-radius: 8px; /* Curvy button */
+    border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -74,7 +74,7 @@ button {
 
 button:hover {
     background-color: #bf0811;
-    transform: translateY(-2px); /* Subtle lift effect on hover */
+    transform: translateY(-2px);
 }
 
 /* Responsive Styles */
@@ -91,6 +91,7 @@ button:hover {
     input[type="number"],
     input[type="email"] {
         font-size: 14px;
+        padding: 10px; /* Adjusted padding */
     }
 
     button {
@@ -107,15 +108,39 @@ button:hover {
 
     .checkout-container h1 {
         font-size: 20px;
+        margin-bottom: 15px; /* Reduce space for smaller screens */
+    }
+
+    input[type="number"],
+    input[type="email"] {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+        margin-top: 10px; /* Add space above button */
+    }
+}
+
+@media (max-width: 320px) {
+    .checkout-container {
+        padding: 10px;
+    }
+
+    .checkout-container h1 {
+        font-size: 18px;
     }
 
     input[type="number"],
     input[type="email"] {
         font-size: 12px;
+        padding: 6px;
     }
 
     button {
-        padding: 10px;
+        padding: 8px;
         font-size: 12px;
     }
 }
