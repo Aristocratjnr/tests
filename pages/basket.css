@@ -14,7 +14,7 @@ body {
     color: white;
     border-radius: 15px 15px 0 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px; /* Added spacing below header */
+    margin-bottom: 20px;
 }
 
 /* Basket Container */
@@ -40,7 +40,7 @@ table {
 th, td {
     padding: 15px;
     text-align: left;
-    border-bottom: 1px solid #e0e0e0; /* Slightly lighter border for a softer look */
+    border-bottom: 1px solid #e0e0e0;
 }
 
 th {
@@ -84,7 +84,7 @@ td {
 .quantity-btn:hover {
     background-color: #d0021b;
     color: white;
-    transform: translateY(-2px); /* Lift effect on hover */
+    transform: translateY(-2px);
 }
 
 #quantity {
@@ -116,7 +116,7 @@ td {
 
 .checkout-btn:hover {
     background-color: #16a085;
-    transform: translateY(-2px); /* Lift effect on hover */
+    transform: translateY(-2px);
 }
 
 /* Close Button */
@@ -136,7 +136,7 @@ td {
 
 .close-btn:hover {
     background-color: orange;
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    transform: scale(1.1);
 }
 
 .close-btn:before {
@@ -212,11 +212,14 @@ td {
 @media (max-width: 480px) {
     .basket-summary {
         text-align: center;
+        margin-top: 20px;
     }
 
     .checkout-btn {
         width: 100%;
         margin-top: 15px;
+        padding: 10px;
+        font-size: 16px;
     }
 
     th, td {
@@ -224,8 +227,15 @@ td {
         font-size: 14px;
     }
 
+    .product-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .product-info img {
         width: 50px;
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 
     .quantity-btn, #quantity {
