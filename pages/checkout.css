@@ -3,71 +3,67 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f8ff; /* Light background for contrast */
     line-height: 1.6;
 }
 
 /* Header Section */
 .header {
-    background-color: #ff0000;
+    background-color: #ff4500; /* Brighter red for more vibrancy */
     color: white;
     text-align: center;
     padding: 20px 0;
     border-radius: 30px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
-    margin: 0 auto 30px auto; /* Center the header and add space below */
-    max-width: 90%; /* Ensure it looks good on different screen sizes */
+    margin: 0 auto 30px auto;
+    max-width: 90%;
     width: 100%;
 }
 
-/* Improved Header Decorative Elements */
+/* Decorative Elements for Header */
 .header::before,
 .header::after {
     content: '';
     position: absolute;
-    bottom: -25px; /* Move decorative elements slightly lower */
-    width: 140%;
-    height: 50px;
-    background-color: rgba(255, 0, 0, 0.8); /* Slight transparency for a layered effect */
+    bottom: -30px;
+    width: 150%;
+    height: 55px;
+    background-color: rgba(255, 69, 0, 0.9); /* Enhanced transparency */
     border-radius: 50%;
-    left: -20%;
-    transform: rotate(-3deg); /* Slightly rotate for a dynamic look */
+    left: -25%;
+    transform: rotate(-4deg);
 }
 
-/* Optional: Add Some Spacing Above the Header */
-.header-wrapper {
-    padding: 20px 10px;
-}
+/* Container */
 .container {
     text-align: center;
     background-color: white;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
     max-width: 400px;
     width: 90%;
+    margin: 20px auto;
 }
 
+/* Entry Price */
 .entry-price {
-    color: #ff0000;
-    font-size: 1.5em;
+    color: #ff4500;
+    font-size: 1.7em;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
-.entry-price span {
-    font-size: 0.8em;
-    color: #999;
-    font-weight: normal;
-}
-
+/* Question Section */
 .question {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-bottom: 20px;
+    color: #333;
 }
 
+/* Answer Section */
 .answers {
     display: flex;
     justify-content: center;
@@ -76,7 +72,7 @@ body {
 
 .answer {
     flex: 1;
-    padding: 15px 20px;
+    padding: 15px;
     margin: 0 10px;
     border-radius: 8px;
     border: 2px solid #ccc;
@@ -86,21 +82,23 @@ body {
 }
 
 .answer.selected {
-    background-color: #ff0000;
+    background-color: #ff4500;
     color: white;
-    border-color: #ff0000;
+    border-color: #ff4500;
 }
 
 .answer:hover {
-    border-color: #ff0000;
+    border-color: #ff4500;
 }
 
+/* Entry Options */
 .entry-options {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
+/* Entry Buttons */
 .entry-button {
     flex: 1;
     padding: 15px;
@@ -112,34 +110,34 @@ body {
 }
 
 .entry-button.online {
-    background-color: #28a745;
+    background-color: #32cd32; /* Brighter green */
     color: white;
 }
 
 .entry-button.online:hover {
-    background-color: #218838;
+    background-color: #2dbb2b;
 }
 
 .entry-button.postal {
     background-color: transparent;
-    color: #28a745;
-    border: 2px solid #28a745;
+    color: #32cd32;
+    border: 2px solid #32cd32;
 }
 
 .entry-button.postal:hover {
-    background-color: #28a745;
+    background-color: #32cd32;
     color: white;
 }
 
 /* Info Bar */
 .info-bar {
-    background-color: #000000;
+    background-color: #333;
     color: white;
     display: flex;
     justify-content: space-around;
-    padding: 10px;
+    padding: 12px;
     border-radius: 0 0 20px 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     flex-wrap: wrap;
 }
 
@@ -157,12 +155,12 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-in-out;
 }
 
 .image-section img:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 /* Ticket Section */
@@ -170,32 +168,9 @@ body {
     background-color: white;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     max-width: 400px;
     width: 100%;
-}
-
-/* Responsive Headings */
-.ticket-section h2 {
-    color: #ff0000;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-/* Entry Type Buttons */
-.entry-type button {
-    background-color: #e6e6e6;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.entry-type button:hover {
-    background-color: #d4d4d4;
-    transform: translateY(-2px);
 }
 
 /* Ticket Quantity Controls */
@@ -217,14 +192,9 @@ body {
     padding: 5px;
 }
 
-.slider {
-    flex: 1;
-    margin: 0 10px;
-}
-
 /* Add to Basket Button */
 .add-to-basket {
-    background-color: #28a745;
+    background-color: #32cd32;
     color: white;
     border: none;
     padding: 15px;
@@ -232,12 +202,12 @@ body {
     margin-top: 20px;
     border-radius: 20px;
     cursor: pointer;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .add-to-basket:hover {
-    background-color: #218838;
+    background-color: #2dbb2b;
     transform: translateY(-3px);
 }
 
@@ -251,35 +221,13 @@ body {
 }
 
 .countdown {
-    background-color: #000000;
+    background-color: #333;
     color: white;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     min-width: 100px;
     text-align: center;
-}
-
-/* Sold Info Section */
-.sold-info {
-    margin-top: 20px;
-}
-
-/* Progress Bar */
-.progress-bar {
-    background-color: #e6e6e6;
-    border-radius: 10px;
-    height: 10px;
-    margin-top: 5px;
-    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.progress {
-    background-color: #ff0000;
-    height: 100%;
-    border-radius: 10px;
-    transition: width 0.3s ease;
 }
 
 /* Share Buttons */
@@ -292,24 +240,24 @@ body {
 }
 
 .share-buttons button {
-    background-color: #e6e6e6;
+    background-color: #dcdcdc;
     border: none;
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
 }
 
 .share-buttons button:hover {
     transform: translateY(-3px);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-    background-color: #d4d4d4;
+    background-color: #c0c0c0;
 }
 
 .share-buttons button:active {
     transform: translateY(0);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Media Queries for Responsive Design */
@@ -340,26 +288,22 @@ body {
     }
 
     .container {
-        max-width: 1000px;
+        max-width: 100%;
         margin: 0 auto;
         padding: 20px;
     }
-    
+
     .header {
         margin-bottom: 40px;
     }
-    
+
     .header h1 {
         font-size: 2rem;
-        color: #000;
-        border-bottom: 2px solid #d0021b;
-        padding-bottom: 10px;
     }
-    
+
     .header p {
         font-size: 1.1rem;
-        color: #333;
-        margin: 5px 0;
+        color: #f0f8ff;
     }
 
     .prize-description {
@@ -368,86 +312,17 @@ body {
         padding: 20px;
         background-color: white;
         border-radius: 20px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
         text-align: center;
     }
-    
-    .prize-description h2 {
-        color: #ff0000;
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-    
-    .prize-description h1 {
-        font-size: 30px;
-        font-weight: bold;
-        margin: 20px 0;
-        color: #000;
-    }
-    
-    .prize-description p {
-        font-size: 18px;
-        margin: 10px 0;
-        color: #333;
-    }
-    
-    .prize-description hr.line {
-        border: none;
-        border-top: 2px solid #ff0000;
-        margin: 10px 0;
-    }
-    
+
     .accordion {
         max-width: 800px;
         margin: 40px auto;
         padding: 0 20px;
         background-color: white;
         border-radius: 20px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    .accordion-item {
-        padding: 20px 0;
-        border-bottom: 1px solid #d0021b;
-        cursor: pointer;
-        position: relative;
-    }
-    
-    .accordion-item:last-child {
-        border-bottom: none;
-    }
-    
-    .accordion-header {
-        font-size: 20px;
-        color: #333;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-right: 20px;
-    }
-    
-    .accordion-content {
-        font-size: 18px;
-        color: #666;
-        display: none;
-        padding: 20px;
-        text-align: left;
-    }
-    
-    .accordion-item.active .accordion-content {
-        display: block;
-    }
-    
-    .accordion-item.active .accordion-header::after {
-        content: '-';
-    }
-    
-    .accordion-item::after {
-        content: '+';
-        position: absolute;
-        right: 20px;
-        font-size: 20px;
-        color: #333;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     }
 
     .banner-container {
@@ -501,4 +376,54 @@ body {
         color: white;
         transform: scale(1.1);
     }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .info-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .image-section img {
+        max-width: 100%;
+    }
+
+    .ticket-section {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 15px 0;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .timer {
+        flex-direction: column;
+    }
+
+    .countdown {
+        min-width: 100%;
+    }
+
+    .progress-bar {
+        height: 8px;
+    }
+
+    .share-buttons {
+        flex-direction: column;
+    }
+
+    .entry-price {
+        font-size: 1.2em;
+    }
+}
 }
