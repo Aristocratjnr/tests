@@ -115,6 +115,17 @@ h2 {
     color: #e6b800;
 }
 
+.input-box .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    cursor: pointer;
+    color: #fff;
+}
+
+
 /* Responsive Design */
 @media (max-width: 480px) {
     .login-container {
