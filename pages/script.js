@@ -1,5 +1,5 @@
 // Countdown Timer
-const countdownDate = new Date("2024-08-23T16:00:00").getTime();
+const countdownDate = new Date("Aug 30, 2024 15:00:00").getTime();
 
 const x = setInterval(function() {
     const now = new Date().getTime();
