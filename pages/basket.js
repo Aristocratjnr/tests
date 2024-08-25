@@ -14,20 +14,6 @@ function updateBasket() {
     localStorage.setItem('subtotalAmount', subtotal); // Save the subtotal amount
 }
 
-// Load quantity and subtotal from local storage on page load
-window.onload = () => {
-    const savedQuantity = localStorage.getItem('ticketQuantity');
-    const savedSubtotal = localStorage.getItem('subtotalAmount'); // Load the subtotal
-    if (savedQuantity) {
-        document.getElementById('quantity').value = savedQuantity;
-        document.getElementById('total-tickets').textContent = savedQuantity;
-    }
-    if (savedSubtotal) {
-        document.getElementById('subtotal').textContent = `₵${savedSubtotal}`;
-        document.getElementById('total-spend').textContent = `₵${savedSubtotal}`;
-    }
-};
-
 // Event listeners for increment and decrement buttons
 document.getElementById('increment').addEventListener('click', () => {
     let quantity = parseInt(document.getElementById('quantity').value);
