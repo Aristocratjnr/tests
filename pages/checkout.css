@@ -285,6 +285,34 @@ body {
     text-align: center;
 }
 
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0; /* Background of the progress bar */
+    border-radius: 10px;
+    overflow: hidden; /* Ensure the progress is contained within the bar */
+    position: relative;
+}
+
+.progress {
+    background-color: #000505; /* Color of the progress bar */
+    height: 20px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-text {
+    color: #fff; /* Text color */
+    font-weight: bold; /* Makes the text bold */
+    font-size: 14px; /* Adjust the font size */
+    position: absolute; /* Position the text inside the progress bar */
+    width: 100%; /* Text covers the full width */
+    text-align: center; /* Center the text */
+}
+
+
 /* Share Buttons */
 .share-buttons {
     display: flex;
