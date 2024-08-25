@@ -295,7 +295,7 @@ body {
 
 .progress {
     background-color: #000505; /* Color of the progress bar */
-    height: 20px;
+    height: 30px;
     border-radius: 10px;
     position: relative;
     display: flex;
@@ -323,7 +323,6 @@ body {
 }
 
 .share-buttons button {
-    background-color: #dcdcdc;
     border: none;
     padding: 10px;
     border-radius: 10px;
@@ -335,13 +334,55 @@ body {
 .share-buttons button:hover {
     transform: translateY(-3px);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-    background-color: #c0c0c0;
 }
 
 .share-buttons button:active {
     transform: translateY(0);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
+
+/* Specific button colors */
+.share-buttons button:nth-child(1) {
+    background-color:  #3f3e3e; /* Close button color */
+}
+
+.share-buttons button:nth-child(2) {
+    background-color: #3b5998; /* Facebook */
+}
+
+.share-buttons button:nth-child(3) {
+    background-color: #ff4500; /* Reddit */
+}
+
+.share-buttons button:nth-child(4) {
+    background-color: #25d366; /* WhatsApp */
+}
+
+.share-buttons button:nth-child(5) {
+    background-color: #c71610; /* Email */
+}
+
+/* Optional: Hover effects for specific buttons */
+.share-buttons button:nth-child(1):hover {
+    background-color:  #323131;
+}
+
+.share-buttons button:nth-child(2):hover {
+    background-color: #2d4373;
+}
+
+.share-buttons button:nth-child(3):hover {
+    background-color: #d43500;
+}
+
+.share-buttons button:nth-child(4):hover {
+    background-color: #20b45a;
+}
+
+.share-buttons button:nth-child(5):hover {
+    background-color: #b8130e;
+}
+
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
