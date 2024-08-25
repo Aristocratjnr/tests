@@ -11,6 +11,7 @@ function updateBasket() {
 
     // Save to local storage
     localStorage.setItem('ticketQuantity', quantity);
+    localStorage.setItem('subtotalAmount', subtotal); // Save the subtotal amount
 }
 
 // Event listeners for increment and decrement buttons
