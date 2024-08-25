@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- For FontAwesome Icons -->
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <h2>Welcome Back</h2>
+            <form id="loginForm">
+                <div class="input-box">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" required>
+                    <label>Password</label>
+                    <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+                </div>
+                <button type="submit" class="login-button">Login</button>
+                <div class="forgot-password">
+                    <a href="#">Forgot your password?</a>
+                </div>
+                <div class="signup-link">
+                    Don't have an account? <a href="#">Sign up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
