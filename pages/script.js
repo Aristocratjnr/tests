@@ -36,9 +36,9 @@ document.querySelectorAll('.accordion-header').forEach(item => {
 document.querySelectorAll('.entry-button').forEach(button => {
     button.addEventListener('click', function() {
         if (button.classList.contains('online')) {
-            window.location.href = 'online-entry-url.html'; // Replace with actual URL
+            window.location.href = './comingsoon.html'; 
         } else if (button.classList.contains('postal')) {
-            window.location.href = 'postal-entry-url.html'; // Replace with actual URL
+            window.location.href = './comingsoon.html'; // Replace with actual URL
         }
     });
 });

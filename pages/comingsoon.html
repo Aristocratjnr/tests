@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #1c92d2, #f2fcfe);
+            color: #ffffff;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .coming-soon-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: space-around;
+            max-width: 500px;
+            margin: 0 auto 40px;
+        }
+
+        .countdown div {
+            text-align: center;
+        }
+
+        .countdown span {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .countdown label {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .subscribe-input {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .subscribe-input input[type="email"] {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .subscribe-input button {
+            padding: 10px 20px;
+            background-color: #1c92d2;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .subscribe-input button:hover {
+            background-color: #116aa6;
+        }
+
+        .social-icons {
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #f2fcfe;
+        }
+    </style>
+    <!-- Include SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+</head>
+<body>
+
+    <div class="coming-soon-container">
+        <h1>Coming Soon<div class="emoji">🚀✨🌟</div></h1>
+        <p>We're working hard to bring you something amazing. Stay tuned!</p>
+
+        <div class="countdown">
+            <div>
+                <span id="days">00</span>
+                <label>Days</label>
+            </div>
+            <div>
+                <span id="hours">00</span>
+                <label>Hours</label>
+            </div>
+            <div>
+                <span id="minutes">00</span>
+                <label>Minutes</label>
+            </div>
+            <div>
+                <span id="seconds">00</span>
+                <label>Seconds</label>
+            </div>
+        </div>
+
+        <div class="subscribe-input">
+            <input type="email" id="email" placeholder="Enter your email" />
+            <button id="notifyBtn">Notify Me</button>
+        </div>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+
+    <script>
+        // Countdown Timer
+        const countdownDate = new Date("Sep 30, 2024 00:00:00").getTime();
+
+        const countdownFunction = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours;
+            document.getElementById("minutes").textContent = minutes;
+            document.getElementById("seconds").textContent = seconds;
+
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.querySelector(".coming-soon-container").innerHTML = "<h1>We're Live!</h1>";
+            }
+        }, 1000);
+
+        // SweetAlert on "Notify Me" button click
+        document.getElementById("notifyBtn").addEventListener("click", function() {
+            const email = document.getElementById("email").value;
+            if (email) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Subscribed!',
+                    text: 'You will be notified when we go live.',
+                });
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please enter a valid email address.',
+                });
+            }
+        });
+    </script>
+    
+</body>
+</html>
