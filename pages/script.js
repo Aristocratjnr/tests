@@ -50,7 +50,7 @@ document.querySelectorAll('.answers .answer').forEach(answer => {
         answer.classList.add('selected');
 
         // Optionally, you can handle the answer selection logic here
-        console.log(`Selected answer: ${answer.textContent}`);
+        console.log("Selected answer: " + answer.textContent);
     });
 });
 
@@ -94,4 +94,4 @@ decrementButton.addEventListener("click", function() {
         slider.value = currentValue;
         output.innerHTML = currentValue;
     }
-});
+}); 
