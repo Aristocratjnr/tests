@@ -450,7 +450,7 @@ body {
     }
     
     .accordion-item {
-        padding: 20px 0;
+        padding: 30px 0;
         border-bottom: 1px solid #d0021b;
         cursor: pointer;
         position: relative;
@@ -545,6 +545,36 @@ body {
         transform: scale(1.1);
     }
     
+/* Styles for the share button on mobile view */
+@media (max-width: 480px) {
+    .share-button {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%; /* Makes the button rounded */
+        font-size: 14px; /* Adjust the font size for mobile view */
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #007bff; /* Example background color */
+        color: #fff;
+        transition: transform 0.2s ease-in-out;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    }
+
+    .share-button:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* Styles for smaller mobile devices */
+@media (max-width: 480px) {
+    .share-button {
+        width: 35px;
+        height: 35px;
+        font-size: 12px; /* Further reduce font size for smaller devices */
+    }
+}
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
