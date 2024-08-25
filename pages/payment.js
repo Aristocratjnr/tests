@@ -21,7 +21,7 @@ function payWithPaystack() {
         currency: 'GHS',
         callback: function(response) {
             alert('Payment complete! Reference: ' + response.reference);
-            // You can also send the reference to your server for further processing
+           
         },
         onClose: function() {
             alert('Transaction was not completed');
