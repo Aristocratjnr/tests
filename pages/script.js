@@ -32,6 +32,27 @@ document.querySelectorAll('.accordion-header').forEach(item => {
         });
     });
 });
+// Function to handle clicks on the entry buttons
+document.querySelectorAll('.entry-button').forEach(button => {
+    button.addEventListener('click', function() {
+        if (button.classList.contains('online')) {
+            window.location.href = 'online-entry-url.html'; // Replace with actual URL
+        } else if (button.classList.contains('postal')) {
+            window.location.href = 'postal-entry-url.html'; // Replace with actual URL
+        }
+    });
+});
+
+// Function to handle clicks on the answers
+document.querySelectorAll('.answers .answer').forEach(answer => {
+    answer.addEventListener('click', function() {
+        document.querySelectorAll('.answers .answer').forEach(ans => ans.classList.remove('selected'));
+        answer.classList.add('selected');
+
+        // Optionally, you can handle the answer selection logic here
+        console.log(`Selected answer: ${answer.textContent}`);
+    });
+});
 
 
 // Ticket Quantity Slider
