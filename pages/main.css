@@ -1,0 +1,42 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header .navbar .btn {
+    font-size: 1.5rem;
+}
+
+.hero .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero .carousel-caption h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hero .carousel-caption .btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+.countdown .time-box {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.countdown .time-box span {
+    font-size: 3rem;
+    display: block;
+}
+
+.countdown p {
+    font-size: 1.5rem;
+}
