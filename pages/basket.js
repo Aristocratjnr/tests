@@ -1,7 +1,7 @@
 // Function to update the quantity and subtotal
 function updateBasket() {
     const quantity = parseInt(document.getElementById('quantity').value);
-    const pricePerTicket = 0.48;
+    const pricePerTicket = 2;
     const subtotal = (quantity * pricePerTicket).toFixed(2);
 
     // Update the subtotal display
