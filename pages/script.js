@@ -20,6 +20,7 @@ const x = setInterval(function() {
         document.querySelector(".timer").innerHTML = "EXPIRED";
     }
 }, 1000);
+
 document.querySelectorAll('.accordion-header').forEach(item => {
     item.addEventListener('click', () => {
         const parent = item.parentElement;
@@ -32,6 +33,7 @@ document.querySelectorAll('.accordion-header').forEach(item => {
         });
     });
 });
+
 // Function to handle clicks on the entry buttons
 document.querySelectorAll('.entry-button').forEach(button => {
     button.addEventListener('click', function() {
@@ -54,6 +56,44 @@ document.querySelectorAll('.answers .answer').forEach(answer => {
     });
 });
 
+// Function to update the quantity and subtotal
+function updateBasket() {
+    const quantity = parseInt(document.getElementById('quantity').value);
+    const pricePerTicket = 2;
+    const subtotal = (quantity * pricePerTicket).toFixed(2);
+
+    // Update the subtotal display
+    document.getElementById('subtotal').textContent = `₵${subtotal}`;
+    document.getElementById('total-tickets').textContent = quantity;
+    document.getElementById('total-spend').textContent = `₵${subtotal}`;
+
+    // Save to local storage
+    localStorage.setItem('ticketQuantity', quantity);
+    localStorage.setItem('subtotalAmount', subtotal); // Save the subtotal amount
+}
+
+slider.oninput = function() {
+    output.innerHTML = this.value;
+    quantityInput.value = this.value;
+    updateBasket(); // Update the basket whenever the slider value changes
+};
+
+// Load quantity and subtotal from local storage on page load
+window.onload = () => {
+    const savedQuantity = localStorage.getItem('ticketQuantity');
+    const savedSubtotal = localStorage.getItem('subtotalAmount'); // Load the subtotal
+    if (savedQuantity) {
+        document.getElementById('quantity').value = savedQuantity;
+        slider.value = savedQuantity;
+        output.innerHTML = savedQuantity;
+        updateBasket(); // Ensure basket is updated with stored values
+    }
+    if (savedSubtotal) {
+        document.getElementById('subtotal').textContent = `₵${savedSubtotal}`;
+        document.getElementById('total-spend').textContent = `₵${savedSubtotal}`;
+    }
+};
+
 
 // Ticket Quantity Slider
 const slider = document.getElementById("ticketSlider");
@@ -65,11 +105,13 @@ output.innerHTML = slider.value; // Display the default slider value
 slider.oninput = function() {
     output.innerHTML = this.value;
     quantityInput.value = this.value;
+    updateBasket(); // Update the basket whenever the slider value changes
 };
 
 quantityInput.oninput = function() {
     slider.value = this.value;
     output.innerHTML = this.value;
+    updateBasket(); // Update the basket whenever the input value changes
 };
 
 // Ticket Quantity Increment/Decrement Buttons
@@ -83,6 +125,7 @@ incrementButton.addEventListener("click", function() {
         quantityInput.value = currentValue;
         slider.value = currentValue;
         output.innerHTML = currentValue;
+        updateBasket(); // Update the basket whenever the quantity increases
     }
 });
 
@@ -93,5 +136,17 @@ decrementButton.addEventListener("click", function() {
         quantityInput.value = currentValue;
         slider.value = currentValue;
         output.innerHTML = currentValue;
+        updateBasket(); // Update the basket whenever the quantity decreases
     }
 });
+
+// Load quantity from local storage on page load
+window.onload = () => {
+    const savedQuantity = localStorage.getItem('ticketQuantity');
+    if (savedQuantity) {
+        document.getElementById('quantity').value = savedQuantity;
+        slider.value = savedQuantity;
+        output.innerHTML = savedQuantity;
+        updateBasket(); // Ensure basket is updated with stored values
+    }
+};
