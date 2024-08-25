@@ -23,6 +23,8 @@
             padding: 50px;
             border-radius: 15px;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            margin: auto;
         }
 
         h1 {
@@ -42,10 +44,13 @@
             justify-content: space-around;
             max-width: 500px;
             margin: 0 auto 40px;
+            flex-wrap: wrap;
         }
 
         .countdown div {
             text-align: center;
+            flex: 1;
+            margin: 10px;
         }
 
         .countdown span {
@@ -65,6 +70,7 @@
             justify-content: center;
             align-items: center;
             margin-bottom: 20px;
+            flex-wrap: wrap;
         }
 
         .subscribe-input input[type="email"] {
@@ -74,6 +80,8 @@
             margin-right: 10px;
             font-size: 1rem;
             outline: none;
+            flex: 1;
+            max-width: 300px;
         }
 
         .subscribe-input button {
@@ -85,6 +93,8 @@
             font-size: 1rem;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            margin-top: 10px;
+            max-width: 200px;
         }
 
         .subscribe-input button:hover {
@@ -106,9 +116,51 @@
         .social-icons a:hover {
             color: #f2fcfe;
         }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .countdown span {
+                font-size: 2rem;
+            }
+
+            .countdown label {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+                letter-spacing: 3px;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .countdown span {
+                font-size: 1.5rem;
+            }
+
+            .countdown label {
+                font-size: 0.8rem;
+            }
+
+            .subscribe-input button {
+                width: 100%;
+                max-width: none;
+            }
+        }
     </style>
-    <!-- Include SweetAlert -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="icon" href="../images/favicon.png" type="image/png">
 </head>
 <body>
@@ -137,8 +189,8 @@
         </div>
 
         <div class="subscribe-input">
-            <input type="email" id="email" placeholder="Enter your email" />
-            <button id="notifyBtn">Notify Me</button>
+            <input type="email" placeholder="Enter your email" id="email" />
+            <button onclick="notifyMe()">Notify Me</button>
         </div>
 
         <div class="social-icons">
@@ -149,6 +201,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
     <script>
         // Countdown Timer
         const countdownDate = new Date("Sep 30, 2024 00:00:00").getTime();
@@ -173,23 +226,25 @@
             }
         }, 1000);
 
-        // SweetAlert on "Notify Me" button click
-        document.getElementById("notifyBtn").addEventListener("click", function() {
+        // SweetAlert for Notify Me button
+        function notifyMe() {
             const email = document.getElementById("email").value;
             if (email) {
                 Swal.fire({
                     icon: 'success',
-                    title: 'Subscribed!',
-                    text: 'You will be notified when we go live.',
+                    title: 'Thank You!',
+                    text: 'You will be notified at ' + email,
+                    confirmButtonText: 'Close'
                 });
             } else {
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
-                    text: 'Please enter a valid email address.',
+                    text: 'Please enter a valid email address!',
+                    confirmButtonText: 'Close'
                 });
             }
-        });
+        }
     </script>
     
 </body>
