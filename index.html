@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Click Competitions</title>
     <link rel="stylesheet" href="styles.css">
-      <link rel="icon" href="./images/favicon.png" type="image/png">
+    <link rel="icon" href="./images/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -24,15 +24,14 @@
             <a href="./pages/login.html"><button class="login-btn"><i class="fas fa-user"></i>Login</button></a>
             <a href="./pages/comingsoon.html"><button class="basket-btn"><i class="fas fa-shopping-cart"></i> Basket (1)</button></a>
         </div>
-    
     </header>
 
     <!-- Guaranteed Draws Section -->
     <section class="guaranteed-draws">
         <div class="icon">
-        <p>Guaranteed draws - No extensions</p>
-        <img src="./images/tick.svg" alt="SVG Icon" width="10%" height="10%">
-    </div>
+            <p>Guaranteed draws - No extensions</p>
+            <img src="./images/tick.svg" alt="SVG Icon" width="10%" height="10%">
+        </div>
         <div class="payment-options">
             <img src="images/image.png" alt="Visa">
         </div>
@@ -63,12 +62,12 @@
         </div>
         <div class="card">
             <img src="./images/competition1.jpg" alt="Competition 1">
-                <div class="card-details">
+            <div class="card-details">
                 <p class="ends-date">DRAW WED 9TH OCT</p>
                 <div class="progress-bar">
                     <div class="progress" style="width: 50%;">
-                    <span class="progress-text">50%</span>
-                </div>
+                        <span class="progress-text">50%</span>
+                    </div>
                 </div>
                 <p class="price">₵5.00 PER ENTRY</p>
                 <p class="description">SHIPWRECK PRIZE EVERYTIME + MYSTERY PRIZES - 6,000 WINS!</p>
@@ -81,14 +80,146 @@
                 <p class="ends-date">DRAW SAT 12TH OCT</p>
                 <div class="progress-bar">
                     <div class="progress" style="width: 83%;">
-                    <span class="progress-text">83%</span>
-                </div>
+                        <span class="progress-text">83%</span>
+                    </div>
                 </div>
                 <p class="price">₵0.29 PER ENTRY</p>
                 <p class="description">Win ₵20,000 Tax Free Cash For 29p *IMPROVED ODDS*</p>
                 <a href="./pages/comingsoon.html"><button class="enter-btn">ENTER NOW</button></a>
             </div>
         </div>
-    </section>
+    </section><br>
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo and Navigation Links -->
+        <div class="footer-logo-nav">
+            <div class="footer-nav">
+                <h3>Competitions</h3>
+                <p>My Account</p>
+                <p>FAQs</p>
+                <p>Contact</p>
+                <p>Terms & Conditions</p>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-contact">
+            <h3><strong>Contact</strong></h3>
+            <p><a href="">info@competitions.co.gh</a></p><br>
+            <code>&copy; 2024 aristocratjnr🧸||🎈</code>
+            <p>You must be 18 or over to enter.</p>
+        </div>
+
+        <!-- App Download and Social Icons -->
+        <div class="footer-app-social">
+            <p><strong>Download our app today!</strong></p>
+            <div class="app-buttons">
+                <a href="#"><img src="./images/app.svg" alt="App Store"></a>
+                <a href="#"><img src="./images/andriod.png" alt="Google Play"></a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Styles -->
+<style>
+    /* Footer Styles */
+    .footer {
+        background-color: #1d1d1d;
+        padding: 40px 20px;
+        color: #ffffff;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-logo-nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-logo img {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+
+    .footer-nav p {
+        margin: 5px 0;
+    }
+
+    .footer-contact {
+        max-width: 250px;
+    }
+
+    .footer-contact p {
+        margin: 5px 0;
+    }
+
+    .footer-contact a {
+        color: #ff0000;
+        text-decoration: none;
+    }
+
+    .footer-app-social {
+        text-align: right;
+    }
+
+    .footer-app-social p {
+        margin-bottom: 10px;
+    }
+
+    .app-buttons a {
+        margin-right: 10px;
+    }
+
+    .app-buttons img {
+        width: 120px;
+    }
+
+    .social-icons a {
+        color: #ffffff;
+        margin-left: 10px;
+        font-size: 1.5rem;
+        transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+        color: #ff0000;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-app-social {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .app-buttons img {
+            width: 100px;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+    }
+</style>
 </body>
 </html>
