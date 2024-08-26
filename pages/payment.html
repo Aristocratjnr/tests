@@ -36,7 +36,139 @@
             
             <button type="button" onclick="payWithPaystack()">Pay Now</button>
         </form>
+    </div><br>
+     <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo and Navigation Links -->
+        <div class="footer-logo-nav">
+            <div class="footer-nav">
+                <h3>Competitions</h3>
+                <p>My Account</p>
+                <p>FAQs</p>
+                <p>Contact</p>
+                <p>Terms & Conditions</p>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-contact">
+            <h3><strong>Contact</strong></h3>
+            <p><a href="">info@competitions.co.gh</a></p><br>
+            <code>&copy; 2024 aristocratjnr🧸||🎈</code>
+            <p>You must be 18 or over to enter.</p>
+        </div>
+
+        <!-- App Download and Social Icons -->
+        <div class="footer-app-social">
+            <p><strong>Download our app today!</strong></p>
+            <div class="app-buttons">
+                <a href="#"><img src="../images/app.svg" alt="App Store"></a>
+                <a href="#"><img src="../images/andriod.png" alt="Google Play"></a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
     </div>
+</footer>
+
+<!-- Styles -->
+<style>
+    /* Footer Styles */
+    .footer {
+        background-color: #1d1d1d;
+        padding: 40px 20px;
+        color: #ffffff;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-logo-nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-logo img {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+
+    .footer-nav p {
+        margin: 5px 0;
+    }
+
+    .footer-contact {
+        max-width: 250px;
+    }
+
+    .footer-contact p {
+        margin: 5px 0;
+    }
+
+    .footer-contact a {
+        color: #ff0000;
+        text-decoration: none;
+    }
+
+    .footer-app-social {
+        text-align: right;
+    }
+
+    .footer-app-social p {
+        margin-bottom: 10px;
+    }
+
+    .app-buttons a {
+        margin-right: 10px;
+    }
+
+    .app-buttons img {
+        width: 120px;
+    }
+
+    .social-icons a {
+        color: #ffffff;
+        margin-left: 10px;
+        font-size: 1.5rem;
+        transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+        color: #ff0000;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-app-social {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .app-buttons img {
+            width: 100px;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+    }
+</style>
 
     <script src="https://js.paystack.co/v1/inline.js"></script>
     <script src="payment.js"></script>
