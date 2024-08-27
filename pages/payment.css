@@ -158,6 +158,23 @@ button:hover {
 
 /* Further Mobile Adjustments */
 @media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .nav-buttons .login-btn,
+    .nav-buttons .basket-btn {
+        padding: 10px 16px;
+    }
+
     .checkout-container {
         padding: 15px;
     }
@@ -172,12 +189,14 @@ button:hover {
         font-size: 13px;
         padding: 8px;
     }
-
+ 
     button {
         padding: 10px;
         font-size: 14px;
         margin-top: 10px; /* Add space above button */
     }
+
+   
 }
 
 @media (max-width: 320px) {
@@ -194,11 +213,27 @@ button:hover {
         font-size: 12px;
         padding: 6px;
     }
+    .navbar {
+        padding: 10px 15px;
+    }
 
+    .logo img {
+        height: 45px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    .nav-buttons .login-btn,
+    .nav-buttons .basket-btn {
+        padding: 10px 18px;
+    }
     button {
         padding: 8px;
         font-size: 12px;
     }
+
     /* Responsive Styles */
 @media (max-width: 1024px) {
     .navbar {
@@ -271,32 +306,4 @@ button:hover {
         max-width: 100%;
     }
 }
-
-@media (max-width: 480px) {
-    .navbar {
-        padding: 10px;
-    }
-
-    .logo img {
-        height: 35px;
-    }
-
-    .nav-links a {
-        font-size: 14px;
-    }
-
-    .nav-buttons .login-btn,
-    .nav-buttons .basket-btn {
-        padding: 10px 16px;
-    }
-
-    .competitions-banner h1 {
-        font-size: 28px;
-    }
-
-    .card-details {
-        padding: 15px;
-    }
-}
-
 }
