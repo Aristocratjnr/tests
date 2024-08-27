@@ -206,6 +206,21 @@ td {
         padding: 15px;
     }
 
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+
     th, td {
         padding: 12px;
     }
@@ -269,16 +284,34 @@ td {
         text-align: center;
         margin-top: 20px;
     }
+    
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .nav-buttons .login-btn,
+    .nav-buttons .basket-btn {
+        padding: 10px 16px;
+    }
+
 
     .checkout-btn {
-        width: 100%;
+        width: 90%;
         margin-top: 15px;
         padding: 10px;
         font-size: 16px;
     }
 
     th, td {
-        padding: 8px;
+        padding: 5px;
         font-size: 14px;
     }
 
@@ -288,7 +321,7 @@ td {
     }
 
     .product-info img {
-        width: 50px;
+        width: 40px;
         margin-right: 0;
         margin-bottom: 10px;
     }
