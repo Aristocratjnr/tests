@@ -99,7 +99,7 @@ body {
     border-radius: 15px;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
     max-width: 400px;
-    width: 90%;
+    width: 80%;
     margin: 20px auto;
 }
 
@@ -207,7 +207,7 @@ body {
 
 /* Image Section */
 .image-section img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     border-radius: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
@@ -548,8 +548,8 @@ body {
 /* Styles for the share button on mobile view */
 @media (max-width: 480px) {
     .share-button {
-        width: 10px;
-        height: 10px;
+        width: 9px;
+        height: 9px;
         border-radius: 50%; /* Makes the button rounded */
         font-size: 14px; /* Adjust the font size for mobile view */
         padding: 10px;
@@ -570,8 +570,8 @@ body {
 /* Styles for smaller mobile devices */
 @media (max-width: 480px) {
     .share-button {
-        width: 35px;
-        height: 35px;
+        width: 25px;
+        height: 25px;
         font-size: 12px; /* Further reduce font size for smaller devices */
     }
 }
@@ -610,11 +610,11 @@ body {
     }
 
     .countdown {
-        min-width: 100%;
+        min-width: 0%;
     }
 
     .progress-bar {
-        height: 8px;
+        height: 28px;
     }
 
     .share-buttons {
