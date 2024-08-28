@@ -1,9 +1,9 @@
 /* General Body Styles */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f8ff; /* Light background for contrast */
+    margin: 20px;
+    padding: 20px;
+    background-color: #dfe9ee; /* Light background for contrast */
     line-height: 1.6;
 }
 .navbar {
@@ -269,7 +269,7 @@ body {
 /* Countdown Timer */
 .timer {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 20px;
     flex-wrap: wrap;
     gap: 10px;
@@ -281,7 +281,7 @@ body {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-    min-width: 100px;
+    min-width: 5px;
     text-align: center;
 }
 
@@ -548,7 +548,7 @@ body {
 /* Styles for the share button on mobile view */
 @media (max-width: 480px) {
     .share-button {
-        width: 9px;
+        width: 8px;
         height: 9px;
         border-radius: 50%; /* Makes the button rounded */
         font-size: 14px; /* Adjust the font size for mobile view */
@@ -570,10 +570,14 @@ body {
 /* Styles for smaller mobile devices */
 @media (max-width: 480px) {
     .share-button {
-        width: 25px;
+        width: 20px;
         height: 25px;
         font-size: 12px; /* Further reduce font size for smaller devices */
     }
+    .countdown {
+        min-width: 5%;
+    }
+
 }
 
 /* Media Queries for Responsive Design */
@@ -606,11 +610,11 @@ body {
     }
 
     .timer {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .countdown {
-        min-width: 0%;
+        min-width: 5%;
     }
 
     .progress-bar {
@@ -700,7 +704,7 @@ body {
 
 @media (max-width: 480px) {
     .navbar {
-        padding: 10px;
+        padding: 5px;
     }
 
     .logo img {
