@@ -12,8 +12,8 @@ const x = setInterval(function() {
 
     document.getElementById("days").innerHTML = days + " DAYS";
     document.getElementById("hours").innerHTML = hours + " HRS";
-    document.getElementById("minutes").innerHTML = minutes + " MINS";
-    document.getElementById("seconds").innerHTML = seconds + " SECS";
+    document.getElementById("minutes").innerHTML = minutes + "MINS";
+    document.getElementById("seconds").innerHTML = seconds + " ";
 
     if (distance < 0) {
         clearInterval(x);

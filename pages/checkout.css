@@ -614,7 +614,7 @@ body {
     }
 
     .countdown {
-        min-width: 5%;
+        min-width: 0%;
     }
 
     .progress-bar {
