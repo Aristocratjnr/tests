@@ -307,8 +307,8 @@ body {
     color: #fff; /* Text color */
     font-weight: bold; /* Makes the text bold */
     font-size: 14px; /* Adjust the font size */
-    position: absolute; /* Position the text inside the progress bar */
-    width: 100%; /* Text covers the full width */
+    position: absolute; 
+    width: 100%;
     text-align: center; /* Center the text */
 }
 
