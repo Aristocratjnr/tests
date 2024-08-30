@@ -343,7 +343,7 @@ body {
 
 /* Specific button colors */
 .share-buttons button:nth-child(1) {
-    background-color:  #3f3e3e; /* Close button color */
+    background-color:  #3f3e3e;
 }
 
 .share-buttons button:nth-child(2) {
