@@ -294,7 +294,7 @@ body {
 }
 
 .progress {
-    background-color: #000505; /* Color of the progress bar */
+    background-color: #000505; 
     height: 30px;
     border-radius: 10px;
     position: relative;
