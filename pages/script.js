@@ -10,9 +10,9 @@ const x = setInterval(function() {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("days").innerHTML = days + " DAYS";
-    document.getElementById("hours").innerHTML = hours + " HRS";
-    document.getElementById("minutes").innerHTML = minutes + "MINS";
+    document.getElementById("days").innerHTML = days + " days";
+    document.getElementById("hours").innerHTML = hours + " hrs";
+    document.getElementById("minutes").innerHTML = minutes + "mins";
     document.getElementById("seconds").innerHTML = seconds + " ";
 
     if (distance < 0) {
